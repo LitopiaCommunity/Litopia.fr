@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
-const Token = require('./token.json')
+const Token = require('./token.json');
+const fetch = require('node-fetch');
+
 const has= (a,b)=> {
     for(let c in a) {
         if(b.includes(a[c])) return c;
@@ -8,6 +10,13 @@ const has= (a,b)=> {
 const cap=(string)=>{
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+async function getPlayerNumberPromise(contextBot) {
+    let res = await fetch('https://api.mcsrvstat.us/2/play.litopia.fr')
+    res = await res.json()
+    await contextBot.user.setActivity('Litopia '+ res.players.online + '/' + res.players.max)
+}
+
 global.bot.client = new Discord.Client();
 
 
@@ -16,7 +25,10 @@ global.bot.client.login(Token.token);
 
 global.bot.client.on('ready', () => {
     console.log(`Logged in as ${global.bot.client.user.tag}!`);
-    });
+    setInterval(function (){
+        getPlayerNumberPromise(global.bot.client).then(r => console.log('Update Player Number'))
+    },10*1000)
+});
     
     
 global.bot.client.on('message', (message)=> {
