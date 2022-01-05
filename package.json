@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "pm2 start bin/www --name Litopia",
-    "stop":"pm2 stop Litopia",
-    "reload":"pm2 reload Litopia",
+    "stop": "pm2 stop Litopia",
+    "reload": "pm2 reload Litopia"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
