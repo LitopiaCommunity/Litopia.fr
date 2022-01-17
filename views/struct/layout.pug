@@ -9,7 +9,15 @@ html
     link(rel='stylesheet', href="/css/bootstrap.css")
     link(rel='stylesheet', href="/css/fonts.css")
     link(rel='stylesheet', href="/css/style.css")
-
+    meta(name='title', content=seo.title)
+    meta(name='description', content=seo.description)
+    meta(property="og:title" content=openGraph.title)
+    meta(property="og:description" content=openGraph.description)
+    meta(property="og:type" contsseoeoent=openGraph.type)
+    meta(property="og:image" content=openGraph.image)
+    meta(property="og:url" content=openGraph.url)
+    meta(property="og:site_name" content=openGraph.siteName)
+    meta(property="og:locale" content=openGraph.locale)
   body
     .preloader
       .preloader-body
