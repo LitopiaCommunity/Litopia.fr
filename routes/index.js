@@ -88,11 +88,11 @@ router.get('/', function (req, res, next) {
     res.render('accueil', {
         title: 'Accueil', seo: {
             title: 'Accueil - ' + defaultTitle,
-            description: `Litopia est un Serveur Minecraft UHC Vanilla type HolyCube en ${version} sous candidature. Notre communauté et souder et active depuis déjà ${age} ans.`,
+            description: `Litopia est un Serveur Minecraft UHC Vanilla type HolyCube en ${version} sous candidature. Notre communauté est soudée et active depuis déjà ${age} ans.`,
         },
         openGraph: {
             title: defaultTitle,
-            description: `Litopia est un Serveur Minecraft UHC Vanilla type HolyCube en ${version} sous candidature. Notre communauté et souder et active depuis déjà ${age} ans.`,
+            description: `Litopia est un Serveur Minecraft UHC Vanilla type HolyCube en ${version} sous candidature. Notre communauté est soudée et active depuis déjà ${age} ans.`,
             url: rootUrl,
             type: 'website',
             image: rootUrl + '/images/header1.webp',
@@ -106,7 +106,7 @@ router.get('/nous-rejoindre', function (req, res, next) {
     res.render('./nous-rejoindre/index', {
         title: `Nous Rejoindre`, seo: {
             title: 'Nous Rejoindre - ' + defaultTitle,
-            description: `Candidater pour Litopia afin de rejoindre l'aventure ! Notre communauté et souder et vous acceuillera les bras ouvert.`,
+            description: `Candidatez pour Litopia afin de rejoindre l'aventure ! Notre communauté est soudée et vous accueillera les bras ouverts.`,
         },
         openGraph: {
             title: defaultTitle,
@@ -125,11 +125,11 @@ router.get('/nous-rejoindre/reglement', function (req, res, next) {
         title: `Règlement`,
         seo: {
             title: 'Règlement - ' + defaultTitle,
-            description: `Litopia est un serveur de qualité supérieur, nous avons donc un réglement que au quelle nos membres sont soumis à un règlement que vous deverai aussi respectez.`,
+            description: `Litopia est un serveur de qualité supérieur, nous avons donc un règlement auquel nos membres sont soumis et que vous devrez aussi respecter.`,
         },
         openGraph: {
             title: defaultTitle,
-            description: `Litopia est un serveur de qualité supérieur, nous avons donc un réglement que au quelle nos membres sont soumis à un règlement que vous deverai aussi respectez.`,
+            description: `Litopia est un serveur de qualité supérieur, nous avons donc un règlement auquel nos membres sont soumis et que vous devrez aussi respecter.`,
             url: rootUrl+'/nous-rejoindre/reglement',
             type: 'website',
             image: rootUrl + '/images/reglement.webp',
