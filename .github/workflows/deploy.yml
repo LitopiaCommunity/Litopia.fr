@@ -13,4 +13,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd ${{ secrets.REMOTE_DIRECTORY }}; npm run stop; git pull; npm run start
+        script: cd ${{ secrets.REMOTE_DIRECTORY }}; npm run stop; git pull; npm i; npm run start
