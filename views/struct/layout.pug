@@ -1,32 +1,46 @@
 doctype html
 html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
-    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600,700%7CSource+Code+Pro:300,400,500,600,700,900%7CNothing+You+Could+Do%7CPoppins:400,500')
-    link(rel='stylesheet', href="/css/bootstrap.css")
-    link(rel='stylesheet', href="/css/fonts.css")
-    link(rel='stylesheet', href="/css/style.css")
-    meta(name='title', content=seo.title)
-    meta(name='description', content=seo.description)
-    meta(property="og:title" content=openGraph.title)
-    meta(property="og:description" content=openGraph.description)
-    meta(property="og:type" contsseoeoent=openGraph.type)
-    meta(property="og:image" content=openGraph.image)
-    meta(property="og:url" content=openGraph.url)
-    meta(property="og:site_name" content=openGraph.siteName)
-    meta(property="og:locale" content=openGraph.locale)
-  body
-    .preloader
-      .preloader-body
-        .cssload-container
-          .cssload-speeding-wheel
-    .page
-      include nav
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+        link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600,700%7CSource+Code+Pro:300,400,500,600,700,900%7CNothing+You+Could+Do%7CPoppins:400,500')
+        link(rel='stylesheet', href="/css/bootstrap.css")
+        link(rel='stylesheet', href="/css/fonts.css")
+        link(rel='stylesheet', href="/css/style.css")
+        title= title+' - Litopia'
+    if seo
+      if seo.title
+        meta(name='title', content=seo.title)
+      else
+        meta(name='title', content='Litopia')
+      if seo.description
+        meta(name='description', content=seo.description)
+    if openGraph
+      if openGraph.title
+        meta(property="og:title" content=openGraph.title)
+      if openGraph.description
+        meta(property="og:description" content=openGraph.description)
+      if openGraph.type
+        meta(property="og:type" contsseoeoent=openGraph.type)
+      if openGraph.image
+        meta(property="og:image" content=openGraph.image)
+      if openGraph.url
+        meta(property="og:url" content=openGraph.url)
+      if openGraph.siteName
+        meta(property="og:site_name" content=openGraph.siteName)
+      if openGraph.locale
+        meta(property="og:locale" content=openGraph.locale)
+    body
+        .preloader
+            .preloader-body
+                .cssload-container
+                    .cssload-speeding-wheel
+        .page
+            include nav
 
-      block content
-      
-      include footer  
-      #form-output-global.snackbars
+            block content
+
+            include footer
+            #form-output-global.snackbars
