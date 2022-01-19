@@ -5,6 +5,7 @@
   "scripts": {
     "start": "pm2 start bin/www --name Litopia",
     "stop": "pm2 stop Litopia",
+    "dev": "node bin/www",
     "reload": "pm2 reload Litopia"
   },
   "dependencies": {
@@ -14,7 +15,7 @@
     "express": "~4.16.1",
     "express-sitemap-xml": "^1.1.0",
     "http-errors": "~1.6.3",
-    "jstransformer-coffee-script": "^1.1.1",
+    "jstransformer-coffee-script": "^0.0.2",
     "jstransformer-markdown-it": "^2.1.0",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
