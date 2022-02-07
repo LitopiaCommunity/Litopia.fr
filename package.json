@@ -2,6 +2,7 @@
   "name": "litopiafullstack-bot",
   "version": "1.0.0",
   "private": true,
+  "type":"module",
   "scripts": {
     "start": "pm2 start bin/www --name Litopia",
     "stop": "pm2 stop Litopia",
